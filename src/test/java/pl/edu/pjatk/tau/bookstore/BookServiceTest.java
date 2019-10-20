@@ -3,7 +3,7 @@ package pl.edu.pjatk.tau.bookstore;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import pl.edu.pjatk.tau.bookstore.domain.Book;
+import pl.edu.pjatk.tau.bookstore.domain.BookDAO;
 import pl.edu.pjatk.tau.bookstore.service.BookService;
 import pl.edu.pjatk.tau.bookstore.service.BookServiceImpl;
 
@@ -15,8 +15,8 @@ import static org.assertj.core.api.Assertions.assertThatExceptionOfType;
 public class BookServiceTest {
 
 	private BookService service;
-	private Book testBook1;
-	private Book testBook2;
+	private BookDAO testBook1;
+	private BookDAO testBook2;
 
 	@Test
 	public void canAddBook() {
@@ -46,7 +46,7 @@ public class BookServiceTest {
 	public void canGetBookById() {
 		Long id1 = service.add(testBook1);
 
-		Book bookFromDb = service.get(id1);
+		BookDAO bookFromDb = service.get(id1);
 
 		assertThat(bookFromDb)
 				.isNotNull()
@@ -88,7 +88,7 @@ public class BookServiceTest {
 	@Test
 	public void update() {
 		Long id = service.add(testBook1);
-		Book updated = new Book("New Author", testBook1.getTitle(), testBook1.getISBN());
+		BookDAO updated = new BookDAO("New Author", testBook1.getTitle(), testBook1.getISBN());
 		updated.setId(id);
 		service.update(updated);
 
@@ -124,8 +124,8 @@ public class BookServiceTest {
 	@Before
 	public void init() {
 		service = new BookServiceImpl();
-		testBook1 = new Book("Jan Kowalski", "Book1", "978-1-4028-9462-6");
-		testBook2 = new Book("Jan Lisowski", "Book2", "978-1-4028-9462-4");
+		testBook1 = new BookDAO("Jan Kowalski", "Book1", "978-1-4028-9462-6");
+		testBook2 = new BookDAO("Jan Lisowski", "Book2", "978-1-4028-9462-4");
 	}
 
 	@After

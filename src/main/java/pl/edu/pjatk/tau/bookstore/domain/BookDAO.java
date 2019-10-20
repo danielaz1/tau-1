@@ -4,14 +4,13 @@ import lombok.Getter;
 import lombok.Setter;
 
 @Getter
-public class Book {
+public class BookDAO extends AbstractDAO {
 
-	@Setter private Long id = null;
 	@Setter private String author;
 	@Setter private String title;
 	@Setter private String ISBN;
 
-	public Book(String author, String title, String ISBN) {
+	public BookDAO(String author, String title, String ISBN) {
 		this.author = author;
 		this.title = title;
 		this.ISBN = ISBN;
