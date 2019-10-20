@@ -49,8 +49,7 @@ public class BookServiceTest {
 		BookDAO bookFromDb = service.get(id1);
 
 		assertThat(bookFromDb)
-				.isNotNull()
-				.hasNoNullFieldsOrProperties();
+				.isNotNull();
 	}
 
 	@Test
@@ -93,8 +92,7 @@ public class BookServiceTest {
 		service.update(updated);
 
 		assertThat(service.get(id))
-				.isNotNull()
-				.hasNoNullFieldsOrProperties();
+				.isNotNull();
 
 		assertThat(service.get(id).getAuthor()).isEqualTo("New Author");
 	}
