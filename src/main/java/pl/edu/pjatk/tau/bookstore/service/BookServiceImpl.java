@@ -1,5 +1,6 @@
 package pl.edu.pjatk.tau.bookstore.service;
 
+import pl.edu.pjatk.tau.bookstore.domain.AbstractDAO;
 import pl.edu.pjatk.tau.bookstore.domain.BookDAO;
 import pl.edu.pjatk.tau.bookstore.repository.InMemoryBookRepository;
 import pl.edu.pjatk.tau.bookstore.repository.Repository;
@@ -12,14 +13,15 @@ public class BookServiceImpl implements BookService {
 	private Repository repository = new InMemoryBookRepository();
 
 	public Long add(BookDAO book) {
-
 		book.setCreationTime();
 		return repository.add(book);
 	}
 
 	public List<BookDAO> getAll() {
-
-		return repository.getAll();
+		List<BookDAO> books = repository.getAll();
+		books.forEach(AbstractDAO::setAccessTime);
+		books.forEach(b -> repository.update(b));
+		return books;
 	}
 
 	public BookDAO get(Long id) throws NoSuchElementException {
@@ -34,7 +36,7 @@ public class BookServiceImpl implements BookService {
 	}
 
 	public void delete(Long id) {
-		 repository.delete(id);
+		repository.delete(id);
 	}
 
 	public void removeAll() {

@@ -16,18 +16,22 @@ import pl.edu.pjatk.tau.bookstore.service.BookServiceImpl;
 import java.time.Clock;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
+import java.util.List;
 
 import static org.mockito.Mockito.doReturn;
 
 @RunWith(MockitoJUnitRunner.class)
 public class DbAccessTimeTest {
 
-	private static final LocalDateTime FIXED_TIME = LocalDateTime.of(2019,9,26, 23, 0, 0, 0);
-	private static final LocalDateTime FIXED_MODIFICATION_TIME = LocalDateTime.of(2019,9,26, 17, 0, 0, 0);
-	private static final LocalDateTime FIXED_ACCESS_TIME = LocalDateTime.of(2019,9,26, 15, 0, 0, 0);
+	private static final LocalDateTime FIXED_TIME = LocalDateTime.of(2019, 9, 26, 23, 0, 0, 0);
+	private static final LocalDateTime FIXED_MODIFICATION_TIME = LocalDateTime.of(2019, 9, 26, 17, 0, 0, 0);
+	private static final LocalDateTime FIXED_ACCESS_TIME = LocalDateTime.of(2019, 9, 26, 15, 0, 0, 0);
 
 	@InjectMocks
 	private BookDAO testBook;
+
+	@InjectMocks
+	private BookDAO testBook2;
 
 	@Mock
 	private Clock clock;
@@ -42,6 +46,7 @@ public class DbAccessTimeTest {
 	@Before
 	public void init() {
 		testBook = new BookDAO("Jan Kowalski", "Book1", "978-1-4028-9462-6");
+		testBook2 = new BookDAO("Author2", "Book2", "978-1-4028-9462-3");
 	}
 
 	@After
@@ -132,6 +137,38 @@ public class DbAccessTimeTest {
 
 		//Then
 		Assertions.assertThat(service.get(id).getModificationTime()).isNull();
+	}
+
+	@Test
+	public void setAccessTimeForGetAll() {
+		//Given
+		mockTime(FIXED_ACCESS_TIME);
+		service.add(testBook);
+		service.add(testBook2);
+
+		//When
+		List<BookDAO> books = service.getAll();
+
+		//Then
+		Assertions.assertThat(books.get(0).getAccessTime()).isEqualTo(FIXED_ACCESS_TIME);
+		Assertions.assertThat(books.get(1).getAccessTime()).isEqualTo(FIXED_ACCESS_TIME);
+	}
+
+	@Test
+	public void doNotSetAccessTimeForGetAllWhenFlagIsOff() {
+		//Give
+		mockTime(FIXED_ACCESS_TIME);
+		testBook.saveAccessTime(false);
+		testBook2.saveAccessTime(false);
+		service.add(testBook);
+		service.add(testBook2);
+
+		//When
+		List<BookDAO> books = service.getAll();
+
+		//Then
+		Assertions.assertThat(books.get(0).getAccessTime()).isNull();
+		Assertions.assertThat(books.get(1).getAccessTime()).isNull();
 	}
 
 	private void mockTime(LocalDateTime fixedTime) {

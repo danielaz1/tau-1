@@ -1,8 +1,11 @@
 package pl.edu.pjatk.tau.bookstore.domain;
 
+import lombok.Getter;
+
 import java.time.Clock;
 import java.time.LocalDateTime;
 
+@Getter
 public abstract class AbstractDAO {
 
 	private Clock clock = Clock.systemDefaultZone();
@@ -14,10 +17,6 @@ public abstract class AbstractDAO {
 	private boolean saveCreationTime = true;
 	private boolean saveAccessTime = true;
 	private boolean saveModificationTime = true;
-
-	public Long getId() {
-		return id;
-	}
 
 	public void setId(Long id) {
 		this.id = id;
@@ -33,18 +32,10 @@ public abstract class AbstractDAO {
 		}
 	}
 
-	public LocalDateTime getCreationTime() {
-		return creationTime;
-	}
-
 	public void setCreationTime() {
 		if (saveCreationTime) {
 			this.creationTime = LocalDateTime.now(clock);
 		}
-	}
-
-	public LocalDateTime getModificationTime() {
-		return modificationTime;
 	}
 
 	public void setModificationTime() {
@@ -54,14 +45,14 @@ public abstract class AbstractDAO {
 	}
 
 	public void saveCreationTime(boolean flag) {
-		this.saveCreationTime = false;
+		this.saveCreationTime = flag;
 	}
 
-	public void saveAccessTime(boolean b) {
-		this.saveAccessTime = false;
+	public void saveAccessTime(boolean flag) {
+		this.saveAccessTime = flag;
 	}
 
-	public void saveModificationTime(boolean b) {
-		this.saveModificationTime = false;
+	public void saveModificationTime(boolean flag) {
+		this.saveModificationTime = flag;
 	}
 }
