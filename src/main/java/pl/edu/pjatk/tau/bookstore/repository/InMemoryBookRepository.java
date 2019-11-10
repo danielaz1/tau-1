@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.Optional;
+import java.util.regex.Pattern;
 
 public class InMemoryBookRepository implements Repository {
 
@@ -40,13 +41,7 @@ public class InMemoryBookRepository implements Repository {
 
 	public BookDAO get(Long id) throws NoSuchElementException {
 
-		Optional<BookDAO> book = findById(id);
-
-		if (book.isPresent()) {
-			return book.get();
-		} else {
-			throw new NoSuchElementException();
-		}
+		return findById(id).orElseThrow(NoSuchElementException::new);
 	}
 
 	public Long update(BookDAO toUpdate) {
@@ -75,5 +70,20 @@ public class InMemoryBookRepository implements Repository {
 
 	public void removeAll() {
 		db = new ArrayList<>();
+	}
+
+	public BookDAO findByPattern(String regex) {
+
+		Pattern pattern = Pattern.compile(regex);
+
+		return getAll().stream()
+				.filter(b -> pattern.matcher(b.getTitle()).find())
+				.findFirst().orElseThrow(NoSuchElementException::new);
+	}
+
+	public BookDAO findByISBN(String ISBN) {
+		return db.stream()
+				.filter(b -> b.getISBN().equals(ISBN))
+				.findFirst().orElseThrow(NoSuchElementException::new);
 	}
 }

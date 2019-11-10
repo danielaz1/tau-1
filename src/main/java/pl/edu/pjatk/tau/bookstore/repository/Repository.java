@@ -17,4 +17,8 @@ public interface Repository {
 	void delete(Long id);
 
 	void removeAll();
+
+	BookDAO findByPattern(String regex);
+
+	BookDAO findByISBN(String ISBN);
 }

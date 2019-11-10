@@ -17,4 +17,8 @@ public interface BookService {
 	void delete(Long id);
 
 	void removeAll();
+
+	BookDAO findByPattern(String regex);
+
+	void removeByISBNs(List<String> ISBNs);
 }

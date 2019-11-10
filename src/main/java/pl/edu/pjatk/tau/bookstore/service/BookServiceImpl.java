@@ -43,6 +43,14 @@ public class BookServiceImpl implements BookService {
 		repository.removeAll();
 	}
 
+	public BookDAO findByPattern(String regex) {
+		return repository.findByPattern(regex);
+	}
+
+	public void removeByISBNs(List<String> ISBNs) {
+		ISBNs.forEach(i -> delete(repository.findByISBN(i).getId()));
+	}
+
 	private void updateAccessTime(BookDAO book) {
 		book.setAccessTime();
 		repository.update(book);
