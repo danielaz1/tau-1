@@ -50,29 +50,4 @@
         </dependency>
     </dependencies>
 
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.jbehave</groupId>
-                <artifactId>jbehave-maven-plugin</artifactId>
-                <version>3.9.3</version>
-                <executions>
-                    <execution>
-                        <id>run-stories-as-embeddables</id>
-                        <phase>integration-test</phase>
-                        <configuration>
-                            <scope>test</scope>
-                            <includes>
-                                <include>**/*Test.java</include>
-                            </includes>
-                            <ignoreFailureInStories>false</ignoreFailureInStories>
-                        </configuration>
-                        <goals>
-                            <goal>run-stories-as-embeddables</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-        </plugins>
-    </build>
 </project>
