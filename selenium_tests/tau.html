@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+	<title>tau</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Register Validation</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>http://automationpractice.com/index.php<datalist><option>http://automationpractice.com/index.php</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>link=Sign in<datalist><option>link=Sign in</option><option>//a[contains(text(),'Sign in')]</option><option>//header[@id='header']/div[2]/div/div/nav/div/a</option><option>//a[@href='http://automationpractice.com/index.php?controller=my-account']</option><option>//nav/div/a</option><option>css=a.login</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>id=email_create<datalist><option>id=email_create</option><option>name=email_create</option><option>//input[@id='email_create']</option><option>//form[@id='create-account_form']/div/div[2]/input</option><option>//div[2]/input</option><option>css=#email_create</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>id=email_create<datalist><option>id=email_create</option><option>name=email_create</option><option>//input[@id='email_create']</option><option>//form[@id='create-account_form']/div/div[2]/input</option><option>//div[2]/input</option><option>css=#email_create</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>id=email_create<datalist><option>id=email_create</option><option>name=email_create</option><option>//input[@id='email_create']</option><option>//form[@id='create-account_form']/div/div[2]/input</option><option>//div[2]/input</option><option>css=#email_create</option></datalist></td><td>kontotestowe123@test.pl</td>
+</tr>
+<tr><td>click</td><td>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Email address'])[1]/following::span[1]<datalist><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Email address'])[1]/following::span[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Create an account'])[1]/following::span[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Already registered?'])[1]/preceding::span[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Email address'])[2]/preceding::span[1]</option><option>//button[@id='SubmitCreate']/span</option><option>//div[3]/button/span</option><option>css=#SubmitCreate &gt; span</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>id=customer_firstname<datalist><option>id=customer_firstname</option><option>name=customer_firstname</option><option>//input[@id='customer_firstname']</option><option>//form[@id='account-creation_form']/div/div[2]/input</option><option>//div[2]/input</option><option>css=#customer_firstname</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>xpath=(.//*[normalize-space(text()) and normalize-space(.)='DNI / NIF / NIE'])[1]/following::span[1]<datalist><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='DNI / NIF / NIE'])[1]/following::span[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='*'])[14]/following::span[2]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='*'])[15]/preceding::span[1]</option><option>xpath=//*/text()[normalize-space(.)='Register']/parent::*</option><option>//button[@id='submitAccount']/span</option><option>//div[4]/button/span</option><option>css=#submitAccount &gt; span</option></datalist></td><td>You must register at least one phone number. lastname is required. firstname is required. passwd is required. address1 is required. city is required. The Zip/Postal code you've entered is invalid. It must follow this format: 00000 This country requires you to choose a State.</td>
+</tr>
+<tr><td>click</td><td>id=customer_firstname<datalist><option>id=customer_firstname</option><option>name=customer_firstname</option><option>//input[@id='customer_firstname']</option><option>//form[@id='account-creation_form']/div/div[2]/input</option><option>//div[2]/input</option><option>css=#customer_firstname</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>id=customer_firstname<datalist><option>id=customer_firstname</option><option>name=customer_firstname</option><option>//input[@id='customer_firstname']</option><option>//form[@id='account-creation_form']/div/div[2]/input</option><option>//div[2]/input</option><option>css=#customer_firstname</option></datalist></td><td>A</td>
+</tr>
+<tr><td>click</td><td>id=customer_lastname<datalist><option>id=customer_lastname</option><option>name=customer_lastname</option><option>//input[@id='customer_lastname']</option><option>//form[@id='account-creation_form']/div/div[3]/input</option><option>//div[3]/input</option><option>css=#customer_lastname</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>id=customer_lastname<datalist><option>id=customer_lastname</option><option>name=customer_lastname</option><option>//input[@id='customer_lastname']</option><option>//form[@id='account-creation_form']/div/div[3]/input</option><option>//div[3]/input</option><option>css=#customer_lastname</option></datalist></td><td>B</td>
+</tr>
+<tr><td>click</td><td>id=address1<datalist><option>id=address1</option><option>name=address1</option><option>//input[@id='address1']</option><option>//form[@id='account-creation_form']/div[2]/p[4]/input</option><option>//p[4]/input</option><option>css=#address1</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>id=address1<datalist><option>id=address1</option><option>name=address1</option><option>//input[@id='address1']</option><option>//form[@id='account-creation_form']/div[2]/p[4]/input</option><option>//p[4]/input</option><option>css=#address1</option></datalist></td><td>Testowa 1</td>
+</tr>
+<tr><td>click</td><td>id=city<datalist><option>id=city</option><option>name=city</option><option>//input[@id='city']</option><option>//form[@id='account-creation_form']/div[2]/p[6]/input</option><option>//p[6]/input</option><option>css=#city</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>id=city<datalist><option>id=city</option><option>name=city</option><option>//input[@id='city']</option><option>//form[@id='account-creation_form']/div[2]/p[6]/input</option><option>//p[6]/input</option><option>css=#city</option></datalist></td><td>Gdansk</td>
+</tr>
+<tr><td>select</td><td>id=id_state<datalist><option>id=id_state</option><option>name=id_state</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Alabama'])[1]/following::select[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='*'])[9]/following::select[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='*'])[10]/preceding::select[1]</option><option>//select[@id='id_state']</option><option>//div[@id='uniform-id_state']/select</option><option>//p[7]/div/select</option><option>css=#id_state</option></datalist></td><td>label=Alabama</td>
+</tr>
+<tr><td>click</td><td>id=id_state<datalist><option>id=id_state</option><option>name=id_state</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Alabama'])[1]/following::select[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='*'])[9]/following::select[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='*'])[10]/preceding::select[1]</option><option>//select[@id='id_state']</option><option>//div[@id='uniform-id_state']/select</option><option>//p[7]/div/select</option><option>css=#id_state</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>id=postcode<datalist><option>id=postcode</option><option>name=postcode</option><option>//input[@id='postcode']</option><option>//form[@id='account-creation_form']/div[2]/p[8]/input</option><option>//p[8]/input</option><option>css=#postcode</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>id=postcode<datalist><option>id=postcode</option><option>name=postcode</option><option>//input[@id='postcode']</option><option>//form[@id='account-creation_form']/div[2]/p[8]/input</option><option>//p[8]/input</option><option>css=#postcode</option></datalist></td><td>123</td>
+</tr>
+<tr><td>click</td><td>id=phone_mobile<datalist><option>id=phone_mobile</option><option>name=phone_mobile</option><option>//input[@id='phone_mobile']</option><option>//form[@id='account-creation_form']/div[2]/p[13]/input</option><option>//p[13]/input</option><option>css=#phone_mobile</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>id=phone_mobile<datalist><option>id=phone_mobile</option><option>name=phone_mobile</option><option>//input[@id='phone_mobile']</option><option>//form[@id='account-creation_form']/div[2]/p[13]/input</option><option>//p[13]/input</option><option>css=#phone_mobile</option></datalist></td><td>123456</td>
+</tr>
+<tr><td>click</td><td>id=passwd<datalist><option>id=passwd</option><option>name=passwd</option><option>//input[@id='passwd']</option><option>//form[@id='account-creation_form']/div/div[5]/input</option><option>//div[5]/input</option><option>css=#passwd</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>xpath=(.//*[normalize-space(text()) and normalize-space(.)='DNI / NIF / NIE'])[1]/following::span[1]<datalist><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='DNI / NIF / NIE'])[1]/following::span[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='*'])[14]/following::span[2]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='*'])[15]/preceding::span[1]</option><option>xpath=//*/text()[normalize-space(.)='Register']/parent::*</option><option>//button[@id='submitAccount']/span</option><option>//div[4]/button/span</option><option>css=#submitAccount &gt; span</option></datalist></td><td>passwd is required. The Zip/Postal code you've entered is invalid. It must follow this format: 00000</td>
+</tr>
+<tr><td>type</td><td>id=passwd<datalist><option>id=passwd</option><option>name=passwd</option><option>//input[@id='passwd']</option><option>//form[@id='account-creation_form']/div/div[5]/input</option><option>//div[5]/input</option><option>css=#passwd</option></datalist></td><td>123</td>
+</tr>
+<tr><td>click</td><td>xpath=(.//*[normalize-space(text()) and normalize-space(.)='DNI / NIF / NIE'])[1]/following::span[1]<datalist><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='DNI / NIF / NIE'])[1]/following::span[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='*'])[14]/following::span[2]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='*'])[15]/preceding::span[1]</option><option>xpath=//*/text()[normalize-space(.)='Register']/parent::*</option><option>//button[@id='submitAccount']/span</option><option>//div[4]/button/span</option><option>css=#submitAccount &gt; span</option></datalist></td><td>passwd is invalid. The Zip/Postal code you've entered is invalid. It must follow this format: 00000</td>
+</tr>
+<tr><td>click</td><td>id=passwd<datalist><option>id=passwd</option><option>name=passwd</option><option>//input[@id='passwd']</option><option>//form[@id='account-creation_form']/div/div[5]/input</option><option>//div[5]/input</option><option>css=#passwd</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>id=passwd<datalist><option>id=passwd</option><option>name=passwd</option><option>//input[@id='passwd']</option><option>//form[@id='account-creation_form']/div/div[5]/input</option><option>//div[5]/input</option><option>css=#passwd</option></datalist></td><td>12345</td>
+</tr>
+<tr><td>click</td><td>xpath=(.//*[normalize-space(text()) and normalize-space(.)='DNI / NIF / NIE'])[1]/following::span[1]<datalist><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='DNI / NIF / NIE'])[1]/following::span[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='*'])[14]/following::span[2]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='*'])[15]/preceding::span[1]</option><option>xpath=//*/text()[normalize-space(.)='Register']/parent::*</option><option>//button[@id='submitAccount']/span</option><option>//div[4]/button/span</option><option>css=#submitAccount &gt; span</option></datalist></td><td>There is 1 error  The Zip/Postal code you've entered is invalid. It must follow this format: 00000</td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Create Account Failed</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>http://automationpractice.com/index.php<datalist><option>http://automationpractice.com/index.php</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>link=Sign in<datalist><option>link=Sign in</option><option>//a[contains(text(),'Sign in')]</option><option>//header[@id='header']/div[2]/div/div/nav/div/a</option><option>//a[@href='http://automationpractice.com/index.php?controller=my-account']</option><option>//nav/div/a</option><option>css=a.login</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>id=email_create<datalist><option>id=email_create</option><option>name=email_create</option><option>//input[@id='email_create']</option><option>//form[@id='create-account_form']/div/div[2]/input</option><option>//div[2]/input</option><option>css=#email_create</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>id=email_create<datalist><option>id=email_create</option><option>name=email_create</option><option>//input[@id='email_create']</option><option>//form[@id='create-account_form']/div/div[2]/input</option><option>//div[2]/input</option><option>css=#email_create</option></datalist></td><td>test999888@test.pl</td>
+</tr>
+<tr><td>click</td><td>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Email address'])[1]/following::span[1]<datalist><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Email address'])[1]/following::span[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Create an account'])[1]/following::span[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Already registered?'])[1]/preceding::span[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Email address'])[2]/preceding::span[1]</option><option>//button[@id='SubmitCreate']/span</option><option>//div[3]/button/span</option><option>css=#SubmitCreate &gt; span</option></datalist></td><td>An account using this email address has already been registered. Please enter a valid password or request a new one.</td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Login</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>http://automationpractice.com/index.php<datalist><option>http://automationpractice.com/index.php</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>link=Sign in<datalist><option>link=Sign in</option><option>//a[contains(text(),'Sign in')]</option><option>//header[@id='header']/div[2]/div/div/nav/div/a</option><option>//a[@href='http://automationpractice.com/index.php?controller=my-account']</option><option>//nav/div/a</option><option>css=a.login</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>id=email<datalist><option>id=email</option><option>name=email</option><option>//input[@id='email']</option><option>//form[@id='login_form']/div/div/input</option><option>//div[2]/form/div/div/input</option><option>css=#email</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>id=email<datalist><option>id=email</option><option>name=email</option><option>//input[@id='email']</option><option>//form[@id='login_form']/div/div/input</option><option>//div[2]/form/div/div/input</option><option>css=#email</option></datalist></td><td>test999888@test.pl</td>
+</tr>
+<tr><td>type</td><td>id=passwd<datalist><option>id=passwd</option><option>name=passwd</option><option>//input[@id='passwd']</option><option>//form[@id='login_form']/div/div[2]/span/input</option><option>//span/input</option><option>css=#passwd</option></datalist></td><td>password123</td>
+</tr>
+<tr><td>click</td><td>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Forgot your password?'])[1]/following::span[1]<datalist><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Forgot your password?'])[1]/following::span[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Password'])[1]/following::span[2]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Newsletter'])[1]/preceding::span[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Ok'])[1]/preceding::span[1]</option><option>//button[@id='SubmitLogin']/span</option><option>//p[2]/button/span</option><option>css=#SubmitLogin &gt; span</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>xpath=(.//*[normalize-space(text()) and normalize-space(.)='My account'])[2]/following::span[1]<datalist><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='My account'])[2]/following::span[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='My account'])[1]/following::span[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='My credit slips'])[1]/preceding::span[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='My addresses'])[1]/preceding::span[2]</option><option>xpath=//*/text()[normalize-space(.)='Order history and details']/parent::*</option><option>//div[@id='center_column']/div/div/ul/li/a/span</option><option>//li/a/span</option><option>css=a[title="Orders"] &gt; span</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Order history'])[2]/following::p[2]<datalist><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Order history'])[2]/following::p[2]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Order history'])[1]/following::p[2]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Home'])[1]/preceding::p[1]</option><option>xpath=//*/text()[normalize-space(.)='You have not placed any orders.']/parent::*</option><option>//div[@id='block-history']/p</option><option>//div[3]/div/div/p</option><option>css=p.alert.alert-warning</option></datalist></td><td>You have not placed any orders.</td>
+</tr>
+<tr><td>click</td><td>link=Sign out<datalist><option>link=Sign out</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Test Test'])[1]/following::a[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Contact us'])[1]/preceding::a[1]</option><option>xpath=//*/text()[normalize-space(.)='Sign out']/parent::*</option><option>//a[contains(text(),'Sign out')]</option><option>//header[@id='header']/div[2]/div/div/nav/div[2]/a</option><option>//a[@href='http://automationpractice.com/index.php?mylogout=']</option><option>//div[2]/a</option><option>css=a.logout</option></datalist></td><td></td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Login Failed</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>http://automationpractice.com/index.php?controller=authentication&amp;back=history<datalist><option>http://automationpractice.com/index.php?controller=authentication&amp;back=history</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>id=email<datalist><option>id=email</option><option>name=email</option><option>//input[@id='email']</option><option>//form[@id='login_form']/div/div/input</option><option>//div[2]/form/div/div/input</option><option>css=#email</option></datalist></td><td>test999888@test.pl</td>
+</tr>
+<tr><td>type</td><td>id=passwd<datalist><option>id=passwd</option><option>name=passwd</option><option>//input[@id='passwd']</option><option>//form[@id='login_form']/div/div[2]/span/input</option><option>//span/input</option><option>css=#passwd</option></datalist></td><td>password</td>
+</tr>
+<tr><td>click</td><td>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Forgot your password?'])[1]/following::span[1]<datalist><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Forgot your password?'])[1]/following::span[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Password'])[1]/following::span[2]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Newsletter'])[1]/preceding::span[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Ok'])[1]/preceding::span[1]</option><option>//button[@id='SubmitLogin']/span</option><option>//p[2]/button/span</option><option>css=#SubmitLogin &gt; span</option></datalist></td><td>Authentication failed.</td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Sign in and out</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>http://automationpractice.com/index.php<datalist><option>http://automationpractice.com/index.php</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>link=Sign in<datalist><option>link=Sign in</option><option>//a[contains(text(),'Sign in')]</option><option>//header[@id='header']/div[2]/div/div/nav/div/a</option><option>//a[@href='http://automationpractice.com/index.php?controller=my-account']</option><option>//nav/div/a</option><option>css=a.login</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>id=email<datalist><option>id=email</option><option>name=email</option><option>//input[@id='email']</option><option>//form[@id='login_form']/div/div/input</option><option>//div[2]/form/div/div/input</option><option>css=#email</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>id=passwd<datalist><option>id=passwd</option><option>name=passwd</option><option>//input[@id='passwd']</option><option>//form[@id='login_form']/div/div[2]/span/input</option><option>//span/input</option><option>css=#passwd</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>id=passwd<datalist><option>id=passwd</option><option>name=passwd</option><option>//input[@id='passwd']</option><option>//form[@id='login_form']/div/div[2]/span/input</option><option>//span/input</option><option>css=#passwd</option></datalist></td><td>password123</td>
+</tr>
+<tr><td>type</td><td>id=email<datalist><option>id=email</option><option>name=email</option><option>//input[@id='email']</option><option>//form[@id='login_form']/div/div/input</option><option>//div[2]/form/div/div/input</option><option>css=#email</option></datalist></td><td>test999888@test.pl</td>
+</tr>
+<tr><td>click</td><td>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Forgot your password?'])[1]/following::span[1]<datalist><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Forgot your password?'])[1]/following::span[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Password'])[1]/following::span[2]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Newsletter'])[1]/preceding::span[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Ok'])[1]/preceding::span[1]</option><option>//button[@id='SubmitLogin']/span</option><option>//p[2]/button/span</option><option>css=#SubmitLogin &gt; span</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Sign out'])[1]/preceding::span[1]<datalist><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Sign out'])[1]/preceding::span[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Contact us'])[1]/preceding::span[1]</option><option>xpath=//*/text()[normalize-space(.)='Test Test']/parent::*</option><option>//header[@id='header']/div[2]/div/div/nav/div/a/span</option><option>//span</option><option>css=span</option></datalist></td><td></td>
+</tr>
+<tr><td>captureEntirePageScreenshot</td><td><datalist><option>id=passwd</option><option>name=passwd</option><option>//input[@id='passwd']</option><option>//form[@id='login_form']/div/div[2]/span/input</option><option>//span/input</option><option>css=#passwd</option><option></option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>link=Sign out<datalist><option>link=Sign out</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Test Test'])[1]/following::a[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Contact us'])[1]/preceding::a[1]</option><option>xpath=//*/text()[normalize-space(.)='Sign out']/parent::*</option><option>//a[contains(text(),'Sign out')]</option><option>//header[@id='header']/div[2]/div/div/nav/div[2]/a</option><option>//a[@href='http://automationpractice.com/index.php?mylogout=']</option><option>//div[2]/a</option><option>css=a.logout</option></datalist></td><td></td>
+</tr>
+</tbody></table>
+</body>
+</html>
