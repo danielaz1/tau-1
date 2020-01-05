@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot rpa="false" generated="20200106 00:11:15.174" generator="Robot 3.1.2 (Python 2.7.15+ on linux2)">
+<suite source="/home/daniela/IdeaProjects/tau-1/robotframework/consoleapp_tests/test_shapes.robot" id="s1" name="Test Shapes">
+<test id="s1-t1" name="Check Triangles">
+<kw name="Run Shapes App And Test Triangle" library="resource">
+<arguments>
+<arg>1</arg>
+<arg>2</arg>
+<arg>3</arg>
+<arg>nierozpoznano</arg>
+</arguments>
+<kw name="Run Process" library="Process">
+<doc>Runs a process and waits for it to complete.</doc>
+<arguments>
+<arg>${COMMAND}</arg>
+<arg>${a}</arg>
+<arg>${b}</arg>
+<arg>${c}</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<msg timestamp="20200106 00:11:15.197" level="INFO">Starting process:
+./shapes 1 2 3</msg>
+<msg timestamp="20200106 00:11:15.199" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200106 00:11:15.201" level="INFO">Process completed.</msg>
+<msg timestamp="20200106 00:11:15.201" level="INFO">${result} = &lt;result object with rc 0&gt;</msg>
+<status status="PASS" endtime="20200106 00:11:15.201" starttime="20200106 00:11:15.197"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${result.stdout}</arg>
+<arg>${expected}</arg>
+</arguments>
+<status status="PASS" endtime="20200106 00:11:15.202" starttime="20200106 00:11:15.201"></status>
+</kw>
+<status status="PASS" endtime="20200106 00:11:15.202" starttime="20200106 00:11:15.196"></status>
+</kw>
+<kw name="Run Shapes App And Test Triangle" library="resource">
+<arguments>
+<arg>1</arg>
+<arg>1</arg>
+<arg>1</arg>
+<arg>trojkat rownoboczny</arg>
+</arguments>
+<kw name="Run Process" library="Process">
+<doc>Runs a process and waits for it to complete.</doc>
+<arguments>
+<arg>${COMMAND}</arg>
+<arg>${a}</arg>
+<arg>${b}</arg>
+<arg>${c}</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<msg timestamp="20200106 00:11:15.203" level="INFO">Starting process:
+./shapes 1 1 1</msg>
+<msg timestamp="20200106 00:11:15.205" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200106 00:11:15.205" level="INFO">Process completed.</msg>
+<msg timestamp="20200106 00:11:15.206" level="INFO">${result} = &lt;result object with rc 0&gt;</msg>
+<status status="PASS" endtime="20200106 00:11:15.206" starttime="20200106 00:11:15.202"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${result.stdout}</arg>
+<arg>${expected}</arg>
+</arguments>
+<status status="PASS" endtime="20200106 00:11:15.206" starttime="20200106 00:11:15.206"></status>
+</kw>
+<status status="PASS" endtime="20200106 00:11:15.207" starttime="20200106 00:11:15.202"></status>
+</kw>
+<kw name="Run Shapes App And Test Triangle" library="resource">
+<arguments>
+<arg>2</arg>
+<arg>1</arg>
+<arg>2</arg>
+<arg>trojkat rownoramienny</arg>
+</arguments>
+<kw name="Run Process" library="Process">
+<doc>Runs a process and waits for it to complete.</doc>
+<arguments>
+<arg>${COMMAND}</arg>
+<arg>${a}</arg>
+<arg>${b}</arg>
+<arg>${c}</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<msg timestamp="20200106 00:11:15.207" level="INFO">Starting process:
+./shapes 2 1 2</msg>
+<msg timestamp="20200106 00:11:15.209" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200106 00:11:15.210" level="INFO">Process completed.</msg>
+<msg timestamp="20200106 00:11:15.210" level="INFO">${result} = &lt;result object with rc 0&gt;</msg>
+<status status="PASS" endtime="20200106 00:11:15.210" starttime="20200106 00:11:15.207"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${result.stdout}</arg>
+<arg>${expected}</arg>
+</arguments>
+<status status="PASS" endtime="20200106 00:11:15.211" starttime="20200106 00:11:15.211"></status>
+</kw>
+<status status="PASS" endtime="20200106 00:11:15.211" starttime="20200106 00:11:15.207"></status>
+</kw>
+<kw name="Run Shapes App And Test Triangle" library="resource">
+<arguments>
+<arg>5</arg>
+<arg>4</arg>
+<arg>3</arg>
+<arg>trojkat roznoramienny</arg>
+</arguments>
+<kw name="Run Process" library="Process">
+<doc>Runs a process and waits for it to complete.</doc>
+<arguments>
+<arg>${COMMAND}</arg>
+<arg>${a}</arg>
+<arg>${b}</arg>
+<arg>${c}</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<msg timestamp="20200106 00:11:15.212" level="INFO">Starting process:
+./shapes 5 4 3</msg>
+<msg timestamp="20200106 00:11:15.214" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200106 00:11:15.215" level="INFO">Process completed.</msg>
+<msg timestamp="20200106 00:11:15.216" level="INFO">${result} = &lt;result object with rc 0&gt;</msg>
+<status status="PASS" endtime="20200106 00:11:15.216" starttime="20200106 00:11:15.212"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${result.stdout}</arg>
+<arg>${expected}</arg>
+</arguments>
+<status status="PASS" endtime="20200106 00:11:15.216" starttime="20200106 00:11:15.216"></status>
+</kw>
+<status status="PASS" endtime="20200106 00:11:15.217" starttime="20200106 00:11:15.211"></status>
+</kw>
+<status status="PASS" endtime="20200106 00:11:15.217" critical="yes" starttime="20200106 00:11:15.196"></status>
+</test>
+<test id="s1-t2" name="Check Quadrangles">
+<kw name="Run Shapes App And Test Quadrangle" library="resource">
+<arguments>
+<arg>1</arg>
+<arg>2</arg>
+<arg>3</arg>
+<arg>10</arg>
+<arg>nierozpoznano</arg>
+</arguments>
+<kw name="Run Process" library="Process">
+<doc>Runs a process and waits for it to complete.</doc>
+<arguments>
+<arg>${COMMAND}</arg>
+<arg>${a}</arg>
+<arg>${b}</arg>
+<arg>${c}</arg>
+<arg>${d}</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<msg timestamp="20200106 00:11:15.218" level="INFO">Starting process:
+./shapes 1 2 3 10</msg>
+<msg timestamp="20200106 00:11:15.220" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200106 00:11:15.221" level="INFO">Process completed.</msg>
+<msg timestamp="20200106 00:11:15.221" level="INFO">${result} = &lt;result object with rc 0&gt;</msg>
+<status status="PASS" endtime="20200106 00:11:15.221" starttime="20200106 00:11:15.218"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${result.stdout}</arg>
+<arg>${expected}</arg>
+</arguments>
+<status status="PASS" endtime="20200106 00:11:15.222" starttime="20200106 00:11:15.221"></status>
+</kw>
+<status status="PASS" endtime="20200106 00:11:15.222" starttime="20200106 00:11:15.217"></status>
+</kw>
+<kw name="Run Shapes App And Test Quadrangle" library="resource">
+<arguments>
+<arg>1</arg>
+<arg>1</arg>
+<arg>1</arg>
+<arg>1</arg>
+<arg>kwadrat</arg>
+</arguments>
+<kw name="Run Process" library="Process">
+<doc>Runs a process and waits for it to complete.</doc>
+<arguments>
+<arg>${COMMAND}</arg>
+<arg>${a}</arg>
+<arg>${b}</arg>
+<arg>${c}</arg>
+<arg>${d}</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<msg timestamp="20200106 00:11:15.223" level="INFO">Starting process:
+./shapes 1 1 1 1</msg>
+<msg timestamp="20200106 00:11:15.225" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200106 00:11:15.226" level="INFO">Process completed.</msg>
+<msg timestamp="20200106 00:11:15.226" level="INFO">${result} = &lt;result object with rc 0&gt;</msg>
+<status status="PASS" endtime="20200106 00:11:15.226" starttime="20200106 00:11:15.223"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${result.stdout}</arg>
+<arg>${expected}</arg>
+</arguments>
+<status status="PASS" endtime="20200106 00:11:15.227" starttime="20200106 00:11:15.226"></status>
+</kw>
+<status status="PASS" endtime="20200106 00:11:15.227" starttime="20200106 00:11:15.222"></status>
+</kw>
+<kw name="Run Shapes App And Test Quadrangle" library="resource">
+<arguments>
+<arg>2</arg>
+<arg>1</arg>
+<arg>2</arg>
+<arg>1</arg>
+<arg>prostokat</arg>
+</arguments>
+<kw name="Run Process" library="Process">
+<doc>Runs a process and waits for it to complete.</doc>
+<arguments>
+<arg>${COMMAND}</arg>
+<arg>${a}</arg>
+<arg>${b}</arg>
+<arg>${c}</arg>
+<arg>${d}</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<msg timestamp="20200106 00:11:15.228" level="INFO">Starting process:
+./shapes 2 1 2 1</msg>
+<msg timestamp="20200106 00:11:15.231" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200106 00:11:15.232" level="INFO">Process completed.</msg>
+<msg timestamp="20200106 00:11:15.232" level="INFO">${result} = &lt;result object with rc 0&gt;</msg>
+<status status="PASS" endtime="20200106 00:11:15.232" starttime="20200106 00:11:15.228"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${result.stdout}</arg>
+<arg>${expected}</arg>
+</arguments>
+<status status="PASS" endtime="20200106 00:11:15.233" starttime="20200106 00:11:15.232"></status>
+</kw>
+<status status="PASS" endtime="20200106 00:11:15.234" starttime="20200106 00:11:15.227"></status>
+</kw>
+<kw name="Run Shapes App And Test Quadrangle" library="resource">
+<arguments>
+<arg>5</arg>
+<arg>4</arg>
+<arg>3</arg>
+<arg>8</arg>
+<arg>czworobok</arg>
+</arguments>
+<kw name="Run Process" library="Process">
+<doc>Runs a process and waits for it to complete.</doc>
+<arguments>
+<arg>${COMMAND}</arg>
+<arg>${a}</arg>
+<arg>${b}</arg>
+<arg>${c}</arg>
+<arg>${d}</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<msg timestamp="20200106 00:11:15.235" level="INFO">Starting process:
+./shapes 5 4 3 8</msg>
+<msg timestamp="20200106 00:11:15.238" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200106 00:11:15.238" level="INFO">Process completed.</msg>
+<msg timestamp="20200106 00:11:15.238" level="INFO">${result} = &lt;result object with rc 0&gt;</msg>
+<status status="PASS" endtime="20200106 00:11:15.239" starttime="20200106 00:11:15.235"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${result.stdout}</arg>
+<arg>${expected}</arg>
+</arguments>
+<status status="PASS" endtime="20200106 00:11:15.240" starttime="20200106 00:11:15.239"></status>
+</kw>
+<status status="PASS" endtime="20200106 00:11:15.240" starttime="20200106 00:11:15.234"></status>
+</kw>
+<status status="PASS" endtime="20200106 00:11:15.240" critical="yes" starttime="20200106 00:11:15.217"></status>
+</test>
+<doc>Test shapes.
+
+This test has a workflow that is created using keywords in
+the imported resource file.</doc>
+<status status="PASS" endtime="20200106 00:11:15.240" starttime="20200106 00:11:15.176"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="2">Critical Tests</stat>
+<stat fail="0" pass="2">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="Test Shapes" pass="2">Test Shapes</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
