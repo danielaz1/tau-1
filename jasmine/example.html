@@ -1,0 +1,33 @@
+<html>
+</head>
+	<title>Form Validation using Jasmine-Jquery</title>
+    </script>
+    <script type="text/javascript" src="./lib/jquery.js"></script>
+</head>
+<body>
+	<h2> Submit the form below </h2> 
+	<div class="password-strength"></div>    
+	<br/>            
+	<div class="validate-number"></div>      
+	<br/>
+	<label>* Enter Your Password : </label>        
+	<input type="text" class="passwordTextField">        
+	<br/>
+	<label>* Enter Any number :</label>        
+	<input type="text" class="numberTextField">      
+	<br/>        
+	<br/>        
+	<br/>        
+	<button class="validate" onclick=validate()>Validate</button>         
+</body>
+
+
+
+	<script type="module" lang="javascript">
+// a to jest wersja załączenia modułu bezpośrednio w HTML
+	import {formmaster} from 'js/formmaster.js';
+	formmaster.validate('.passwordTextField');
+	</script>
+
+	</html>
+</html>
